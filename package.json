@@ -1,0 +1,24 @@
+{
+  "name": "fiftyprojects",
+  "version": "1.0.0",
+  "description": "a collection of HTML/CSS?/JS projects",
+  "main": "index.html",
+  "scripts": {
+    "dev": "rm -rf dist && parcel dev expanding-cards/index.html",
+    "build": "rm -rf dist && parcel build expanding-cards/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cynthiateeters/fifty-projects.git"
+  },
+  "author": "Cynthia Teeters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cynthiateeters/fifty-projects/issues"
+  },
+  "homepage": "https://github.com/cynthiateeters/fifty-projects#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.29.0"
+  }
+}

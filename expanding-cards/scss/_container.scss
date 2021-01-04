@@ -1,0 +1,70 @@
+.cards {
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0.5rem;
+  height: 70vh;
+  width: 20vw;
+  border-radius: 8rem;
+  cursor: pointer;
+  flex: 0.5;
+  position: relative;
+  transition: all 700ms ease-in-out;
+}
+
+.container h2 {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  transition: opacity 700ms ease-in-out;
+  opacity: 0;
+}
+
+.container.active {
+  border-radius: 1.5rem;
+  flex: 5;
+}
+
+.container.active h2 {
+  transition: opacity 700ms ease-in-out 400ms;
+  opacity: 1;
+}
+
+@each $name, $url in $backgrounds {
+  .container:nth-child(#{$name}) {
+    background-image: $url;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    justify-content: flex-start;
+    overflow: initial;
+    padding: 0.5rem 0 0 0;
+    height: 100%;
+  }
+  .cards {
+    flex-direction: column;
+    height: 75vh;
+  }
+
+  .container {
+    height: 20%;
+    width: 80vw;
+  }
+
+  .container.active {
+    flex: 2;
+  }
+}
