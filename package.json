@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "dev": "rm -rf dist && parcel dev expanding-cards/index.html",
-    "build": "rm -rf dist && parcel build expanding-cards/index.html"
+    "build": "rm -rf dist && parcel build expanding-cards/index.html",
+    "serve": "simple-server dist 3000"
   },
   "repository": {
     "type": "git",
